@@ -206,7 +206,7 @@ export default function Home() {
   }
 
   async function lookupAddress() {
-    let obfuscatedIdentifier = getObfuscatedIdentifier(socialIdentifier);
+    let obfuscatedIdentifier = getObfuscatedIdentifier(identifierToSend);
     let attestations = await sc!.federatedAttestationsContract.lookupAttestations(
       obfuscatedIdentifier,
       [sc!.issuerAddress]
